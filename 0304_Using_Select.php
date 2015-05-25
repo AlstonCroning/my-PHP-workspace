@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<title>Using a SELECT tag</title>
+<title>304 Using a SELECT tag</title>
 <meta name="author" content="Alston" />
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="styles/basic_2.css" type="text/css" />
@@ -14,7 +14,13 @@
 
 <h3>College Report</h3>
 
-
+<?php
+	$firstname = $_POST['firstname'];
+	$position = $_POST['position'];
+	
+	print "<p>You are <span class='textblue'> $firstname</span> and ";
+	print "your position at college is: <span class='textblue'> $position </span></p>";
+?>
 
 </body>
 </html>
