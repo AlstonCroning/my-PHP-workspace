@@ -18,10 +18,23 @@
 
 <div id="mortgagepagestyle">
 
-<p class="titlepara">Thank you! A representative will contact you soon.</p>
+<p class="titlepara">Mortgage Calculation</p>
 
 <?php
-
+	$amountfinanced = $_POST['amtfinance'];
+	$interestrate = $_POST['interestrate'];
+	$monthlypayment = ($amountfinanced * $interestrate) / 12;
+	
+	if( is_numeric($amountfinanced) && is_numeric($interestrate) )
+	{
+		print '<p>If you finance $'.$amountfinanced.' at an interest rate of '.$interestrate.'</p>';
+		print '<p>Your Monthly Payment would be '.$monthlypayment.'</p>';
+	}
+	else	
+	{
+		print '<p> You Must Enter Numerics in the Field </p>';	
+	}
+	
 ?>
 
 </div>
