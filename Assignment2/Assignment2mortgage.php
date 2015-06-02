@@ -23,12 +23,17 @@
 <?php
 	$amountfinanced = $_POST['amtfinance'];
 	$interestrate = $_POST['interestrate'];
-	$monthlypayment = ($amountfinanced * $interestrate) / 12;
+
+	$interestratecalc = $interestrate / 100;
+
+	$monthlypayment = ($amountfinanced * $interestratecalc) / 12;
+	$monthlypayment_formated = number_format( $monthlypayment, 2);
+	
 	
 	if( is_numeric($amountfinanced) && is_numeric($interestrate) )
 	{
-		print '<p>If you finance $'.$amountfinanced.' at an interest rate of '.$interestrate.'</p>';
-		print '<p>Your Monthly Payment would be '.$monthlypayment.'</p>';
+		print '<p>If you finance $'.$amountfinanced.' at an interest rate of '.$interestrate.'%</p>';
+		print '<p>Your Monthly Payment would be $'.$monthlypayment_formated.'</p>';
 	}
 	else	
 	{
