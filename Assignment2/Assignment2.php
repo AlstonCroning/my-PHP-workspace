@@ -16,7 +16,9 @@
 	<img src="images/logo.png" />
 </div>
 
-<p id="titlepara">Thank you! A representative will contact you soon.</p>
+<div class="signupform">
+
+<p class="titlepara">Thank you! A representative will contact you soon.</p>
 
 <?php
 	$firstname = $_POST['firstname'];
@@ -40,10 +42,9 @@
 	print "<br /> and you are interested in living in $city </p>";
 	print "<p>Our representative will review your comments below:</p>";
 	print "<p><textarea class='textdisabled' rows='5' cols='50' disabled='disabled'>$comments</textarea></p>";
-
-	
-
 ?>
+
+</div>
 
 </body>
 </html>

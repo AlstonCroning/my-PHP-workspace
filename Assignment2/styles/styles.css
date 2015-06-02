@@ -33,7 +33,7 @@ textarea {
 	font-weight: bold;
 }
 
-#signupform {
+.signupform {
 	background-color: #D7D6E4;
 	position: absolute;
 	left: 8px;
@@ -52,3 +52,14 @@ textarea {
 	width: 350px;
 	height: 500px;
 }
+
+#mortgagepagestyle {
+	background-color: #D7D6E4;
+	position: absolute;
+	left: 8px;
+	top: 137px;
+	padding-left: 10px;
+	width: 550px;
+	height: 500px;
+}
+
