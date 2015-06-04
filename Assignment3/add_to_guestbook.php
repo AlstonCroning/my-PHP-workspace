@@ -77,7 +77,7 @@
 
 				//$formateddata .= $contactinformation.'|'.$city.'|'.$comments.'|';
 	
-			$formateddata .= ''."\n";	
+			$formateddata .= ''."\n";
 		}
 		else {
 			$formateddata .= ''."\n";
