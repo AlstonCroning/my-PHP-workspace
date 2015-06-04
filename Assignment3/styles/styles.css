@@ -33,6 +33,11 @@ textarea {
 	font-weight: bold;
 }
 
+#titlepara2 {
+	font-size: 25px;
+	font-weight: bold;
+}
+
 .signupform {
 	background-color: #D7D6E4;
 	position: absolute;
@@ -40,7 +45,7 @@ textarea {
 	top: 137px;
 	padding-left: 10px;
 	width: 550px;
-	height: 500px;
+	height: 540px;
 }
 
 #morgageform {
@@ -50,7 +55,7 @@ textarea {
 	top: 137px;
 	padding-left: 10px;
 	width: 350px;
-	height: 500px;
+	height: 540px;
 }
 
 #mortgagepagestyle {
@@ -60,6 +65,9 @@ textarea {
 	top: 137px;
 	padding-left: 10px;
 	width: 550px;
-	height: 500px;
+	height: 540px;
 }
+
+
+
 

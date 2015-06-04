@@ -16,9 +16,7 @@
 	<img src="images/logo.png" />
 </div>
 
-
-
-<p class="titlepara">View GuestBook</p>
+<p id="titlepara2">View GuestBook</p>
 
 
 

@@ -49,7 +49,6 @@
 			
 			$fp = fopen($filename, 'r'); //open the file for reading
 			$counter = 1;
-
 			
 			print '<p>';
 			print 'City Where You Want to Reside:<br />';
@@ -70,8 +69,6 @@
 			fclose($fp);
 		?>
 
-		
-
 		<p>
 			Comments:<br />
 			<textarea name="comments" rows="5" cols="50"></textarea>
@@ -81,6 +78,8 @@
 
 	</form>
 
+	<p>For Admin Use Only: <a href="view_guestbook.php" target="_blank">View Guestbook</a></p>
+	
 </div>
 
 <div id="morgageform">
