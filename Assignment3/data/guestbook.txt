@@ -1,4 +1,2 @@
-Bob|Smith|email@email.com|Chicago|
-John|Willims|private@email.com|Detroit|Please contact me soon|
-Steve|malcom|malcom@email.com|Toronto|
-Michal|juan|michal@email.com|
+Dishan|Croning|email@email.com|Toronto|n/a|
+Alston|Croning|alstoncroning@email.com|Toronto|n/a|
