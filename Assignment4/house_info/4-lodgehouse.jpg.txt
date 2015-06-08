@@ -1,0 +1,6 @@
+city: Luckyville
+price: $1,950,000
+Bedrooms: 6
+Baths: 4
+Footage: 4500sq. ft
+Grabber: Amazing small mansion with plenty of room for gardenning and outdoor activities and plety of room in the interrior with an ultra luxiorious interrior.

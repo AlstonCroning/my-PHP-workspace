@@ -1,0 +1,6 @@
+city: Banff
+price: $300,000
+Bedrooms: 2
+Baths: 1
+Footage: 2000sq. ft
+Grabber: Fantastic Home with an amazing look in the surrounding and a peace full community.
