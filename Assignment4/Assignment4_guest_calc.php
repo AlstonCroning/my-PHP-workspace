@@ -20,7 +20,7 @@
 <div class="signupform">
 	<p class="titlepara">Please sign up on our guest list</p>
 	
-	<form method="post" action="add_to_guestbook.php">
+	<form method="post" action="Assignment4_add_to_guestbook.php">
 
 		<p>
 			First Name:<br />
@@ -78,12 +78,12 @@
 
 	</form>
 
-	<p>For Admin Use Only: <a href="view_guestbook.php" target="_blank">View Guestbook</a></p>
+	<p>For Admin Use Only: <a href="Assignment4_view_guestbook.php" target="_blank">View Guestbook</a></p>
 	
 </div>
 
 <div id="morgageform">
-	<form method="post" action="mortgage.php">
+	<form method="post" action="Assignment4_mortgage.php">
 		<p class="titlepara">Mortgage Calculator</p>
 	
 		<table>
