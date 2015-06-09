@@ -12,12 +12,25 @@
 
 <body>
 
-<div id="logoimage">
-	<a href="http://localhost/Workspace/Assignment4/Assignment4_mainpage.php"><img src="images/logo.png" /></a>
-</div>
+	<div id="logoimage">
+		<a href="http://localhost/Workspace/Assignment4/Assignment4_mainpage.php"><img src="images/logo.png" /></a>
+	</div>
 
+	<div id="divfeaturedhome">
+		<p>Featured Home!</p>
+	</div>
 
-<p><a href="http://localhost/Workspace/Assignment4/Assignment4_guest_calc.php">GuestBook/Mortgage Calculator</a></p>
+	<div id="divsearchcity">
+		<p>Enter City</p>
+	</div>
+
+	<div id="divrealtorspanel">
+		<p>Our Realtors</p>
+	</div>
+
+	<div id="divguestbookandcalc">
+		<p><a href="http://localhost/Workspace/Assignment4/Assignment4_guest_calc.php">GuestBook/Mortgage Calculator</a></p>
+	</div>
 
 </body>
 </html>

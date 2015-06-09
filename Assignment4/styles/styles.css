@@ -75,3 +75,61 @@ textarea {
 #stylerows2 {
 	background-color: #E4ABAB;
 }
+
+#divfeaturedhome {
+	background-color: #D7D6E4;
+	position: absolute;
+	left: 8px;
+	top: 137px;
+	padding-left: 10px;
+	width: 350px;
+	height: 400px;	
+}
+
+#divfeaturedhome  p{
+	color: blue;
+	font-size: 30px;
+	font-weight: bold;	
+}
+
+#divguestbookandcalc {
+	background-color: orange;
+	position: absolute;
+	left: 8px;
+	top: 770px;
+	padding-left: 10px;
+	width: 250px;
+	height: 50px;
+}
+
+#divsearchcity {
+	background-color: pink;
+	position: absolute;
+	left: 8px;
+	top: 550px;
+	padding-left: 10px;
+	width: 350px;
+	height: 200px;
+}
+
+#divsearchcity p { 
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#divrealtorspanel {
+	background-color: lightblue;
+	position: absolute;
+	left: 400px;
+	top: 137px;
+	padding-left: 10px;
+	width: 200px;
+	height: 700px;
+}
+
+#divrealtorspanel p {
+	color: blue;
+	font-size: 20px;
+	font-weight: bold;	
+}
+
