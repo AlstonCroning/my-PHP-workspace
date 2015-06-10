@@ -17,14 +17,56 @@
 	</div>
 
 	<div id="divfeaturedhome">
-		<p>Featured Home!</p>
+		<p class="pdivfeaturedhome">Featured Home!</p>
+	<?php
+	//setting up the house images directory for reading images
+	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+	$dirname = $DOCUMENT_ROOT.'Workspace/Assignment4/house_images';//house images directory name
+	$dirhandle = opendir($dirname); //directory pointer
+	
+	//loads the Featured image
+	if($dirhandle)
+	{
+		$houseimages = array();
+		while( false != ($file = readdir($dirhandle)))
+		{
+			if( $file != '.' && $file != '..' )
+			{
+				array_push( $houseimages, $file);
+			}
+		}		
+	}
+	sort($houseimages);
+	$imagename = 'house_images/2-twolevelhouse.jpg';
+	print "<p><img src='".$imagename."' /></p>";
+	
+	//Gatthering Featured House Information
+	$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/house_info/2-twolevelhouse.txt';
+	$lines_in_a_file = count(  file($filename)  );
+	$fp = fopen( $filename, 'r'); //open the file for reading the data
+
+	if( !feof($fp) )
+	{
+		for($ii = 0; $ii < $lines_in_a_file; $ii++)
+		{
+			$line =	fgets( $fp );
+		}
+		print "<p>Amazing Home!!</p>";
+		print "<br />".$line;
+	}
+	else
+	{
+		print "<p>No Information Provided</p>";
+	}
+	fclose($fp);
+	?>		
 	</div>
 
 	<div id="divsearchcity">
 	<form method="post" action="Assignment4_homelist.php">
 		<p id="p_entercity_divsearchcity">Enter City</p>
 		<input type="text" name="entercity" size="30"/>
-		<br />Leave blank to find all houses listed)
+		<br />(Leave blank to find all houses listed)
 		<p><input type="submit" name="searchcitybutton" value="Find Homes" /></p>
 		<p>Note: Houses only available in the following cities:<br/>
 		Banff, Canmore, Oakwood, Luckyville</p>
@@ -32,7 +74,37 @@
 	</div>
 
 	<div id="divrealtorspanel">
-		<p>Our Realtors</p>
+		<p id="p_divrealtorspanel">Our Realtors</p>
+	<?php
+	//setting up the house images directory for reading images
+	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+	$dirname = $DOCUMENT_ROOT.'Workspace/Assignment4/realter_images';//house images directory name
+	$dirhandle = opendir($dirname); //directory pointer
+	$counter = 0;
+
+	//load all the realator images
+	if($dirhandle)
+	{
+		$realatorimages = array();
+		while( false != ($file = readdir($dirhandle)))
+		{
+			if( $file != '.' && $file != '..' )
+			{
+				array_push( $realatorimages, $file);
+			}
+		}		
+	}
+	sort($realatorimages);
+	foreach ( $realatorimages as $element)
+	{
+		$imagename = 'realter_images/'.$element;
+		print "<p><img src='".$imagename."' /><p>";
+		$realatornames = $realatorimages[$counter];
+		$realatornames = str_replace( '.jpg', '', $realatornames);
+		echo "<p>".$realatornames."</p>";
+		$counter++;
+	}	
+	?>		
 	</div>
 
 	<div id="divguestbookandcalc">

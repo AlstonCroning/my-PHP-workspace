@@ -16,5 +16,37 @@
 		<a href="http://localhost/Workspace/Assignment4/Assignment4_mainpage.php"><img src="images/logo.png" /></a>
 	</div>
 
+
+	
+	<?php
+	//setting up the house images directory for reading images
+	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+	$dirname = $DOCUMENT_ROOT.'Workspace/Assignment4/house_images';//house images directory name
+	$dirhandle = opendir($dirname); //directory pointer
+	
+	
+	//loads all the images
+	if($dirhandle)
+	{
+		$houseimages = array();
+		while( false != ($file = readdir($dirhandle)))
+		{
+			if( $file != '.' && $file != '..' )
+			{
+				array_push( $houseimages, $file);
+			}
+		}		
+	}
+	sort($houseimages);
+	foreach ( $houseimages as $element)
+	{
+		$imagename = 'house_images/'.$element;
+		print "<p><img src='".$imagename."' /></p>";
+	}
+
+	?>
+
+	
+
 </body>
 </html>

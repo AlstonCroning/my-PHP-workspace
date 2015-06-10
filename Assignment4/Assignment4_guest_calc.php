@@ -44,7 +44,7 @@
 
 		<?php
 			$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-			$filename = $DOCUMENT_ROOT.'Workspace/Assignment3/data/'.'cities.txt';
+			$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/data/'.'cities.txt';
 			$lines_in_file = count( file( $filename ) );
 			
 			$fp = fopen($filename, 'r'); //open the file for reading

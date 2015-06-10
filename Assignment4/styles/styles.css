@@ -82,21 +82,27 @@ textarea {
 	left: 8px;
 	top: 137px;
 	padding-left: 10px;
-	width: 370px;
-	height: 400px;	
+	width: 430px;
+	height: 700px;	
 }
 
-#divfeaturedhome  p{
+#divfeaturedhome .pdivfeaturedhome {
 	color: blue;
 	font-size: 30px;
-	font-weight: bold;	
+	font-weight: bold;
+}
+
+#divfeaturedhome p{
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 #divguestbookandcalc {
 	background-color: orange;
 	position: absolute;
 	left: 8px;
-	top: 770px;
+	top: 1060px;
 	padding-left: 10px;
 	width: 250px;
 	height: 50px;
@@ -106,9 +112,9 @@ textarea {
 	background-color: pink;
 	position: absolute;
 	left: 8px;
-	top: 550px;
+	top: 850px;
 	padding-left: 10px;
-	width: 370px;
+	width: 430px;
 	height: 200px;
 }
 
@@ -120,16 +126,29 @@ textarea {
 #divrealtorspanel {
 	background-color: lightblue;
 	position: absolute;
-	left: 410px;
+	left: 460px;
 	top: 137px;
+	padding: 10px;
+	width: 170px;
+	height: 980px;
+}
+#divrealtorspanel img{
 	padding-left: 10px;
-	width: 200px;
-	height: 700px;
+	width: 150px;
+	height: 170px;
+position: relative;
+left: -5px;
+}
+
+#divrealtorspanel #p_divrealtorspanel {
+	color: blue;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 #divrealtorspanel p {
-	color: blue;
-	font-size: 20px;
-	font-weight: bold;	
+	color: black;
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
 }
-
