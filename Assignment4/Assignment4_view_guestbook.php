@@ -42,7 +42,7 @@
 		echo	'	<th>Comments</th>'."\n";
 		echo '</tr>'."\n";
 
-	$counter = 0;	
+	$counter = 0;
 		while(true){
 		$counter++;
 
@@ -53,22 +53,22 @@
 			{
 				$id ='stylerows1';
 				
-					$remainder =  $counter % 2;	
-					if($remainder != 0)
-					{
-						$id ='stylerows1';
-					}
-					else
-					{
-						$id = 'stylerows2';
-					}
+				$remainder =  $counter % 2;	
+				if($remainder != 0)
+				{
+					$id ='stylerows1';
+				}
+				else
+				{
+					$id = 'stylerows2';
+				}
 
-					echo	"<tr id='".$id."'>"."\n";
-					
-					for( $ii = 0; $ii < 5; $ii++ ) 
-					{
-						echo	"	<td>".$SeperatedData[$ii]."</td>"."\n";
-					}
+				echo	"<tr id='".$id."'>"."\n";
+				
+				for( $ii = 0; $ii < 5; $ii++ ) 
+				{
+					echo	"	<td>".$SeperatedData[$ii]."</td>"."\n";
+				}
 				echo	"</tr>"."\n";	
 			}
 			else 

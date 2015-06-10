@@ -21,7 +21,14 @@
 	</div>
 
 	<div id="divsearchcity">
-		<p>Enter City</p>
+	<form method="post" action="Assignment4_homelist.php">
+		<p id="p_entercity_divsearchcity">Enter City</p>
+		<input type="text" name="entercity" size="30"/>
+		<br />Leave blank to find all houses listed)
+		<p><input type="submit" name="searchcitybutton" value="Find Homes" /></p>
+		<p>Note: Houses only available in the following cities:<br/>
+		Banff, Canmore, Oakwood, Luckyville</p>
+	</form>
 	</div>
 
 	<div id="divrealtorspanel">
