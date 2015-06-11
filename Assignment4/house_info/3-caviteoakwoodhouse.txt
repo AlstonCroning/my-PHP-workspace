@@ -1,6 +1,10 @@
+Nice and Quiet place to live
+
 city: Oakwood
 price: $850,000
 Bedrooms: 4
 Baths: 3
 Footage: 1800sq. ft
-Grabber: Unique design with an amazing home and has plenty of room for outdoor activities, and luxurious interrier.
+
+Grabber: 
+Unique design with an amazing home and has plenty of room for outdoor activities, and luxurious interrier.

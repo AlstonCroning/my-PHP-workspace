@@ -24,7 +24,7 @@
 	$dirname = $DOCUMENT_ROOT.'Workspace/Assignment4/house_images';//house images directory name
 	$dirhandle = opendir($dirname); //directory pointer
 	
-	//loads the Featured image
+	//loads the all the images into $houseimages array
 	if($dirhandle)
 	{
 		$houseimages = array();
@@ -36,29 +36,36 @@
 			}
 		}		
 	}
-	sort($houseimages);
+	sort($houseimages);//sort the array
+	
+	//load the Featured image into Featured Home div
 	$imagename = 'house_images/2-twolevelhouse.jpg';
 	print "<p><img src='".$imagename."' /></p>";
+
 	
-	//Gatthering Featured House Information
+	//Setting up the Featured House Information file for reading
 	$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/house_info/2-twolevelhouse.txt';
 	$lines_in_a_file = count(  file($filename)  );
 	$fp = fopen( $filename, 'r'); //open the file for reading the data
 
+	//reads Featured Home file information and display as required
 	if( !feof($fp) )
 	{
-		for($ii = 0; $ii < $lines_in_a_file; $ii++)
+		print "<p>";
+		$line =	fgets( $fp );
+		print $line;
+		print "</p>";	
+		for($ii = 1; $ii < $lines_in_a_file; $ii++)
 		{
 			$line =	fgets( $fp );
 		}
-		print "<p>Amazing Home!!</p>";
-		print "<br />".$line;
+		print $line;
 	}
 	else
 	{
 		print "<p>No Information Provided</p>";
 	}
-	fclose($fp);
+	fclose($fp);//close the file
 	?>		
 	</div>
 

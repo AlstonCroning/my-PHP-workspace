@@ -1,7 +1,10 @@
+Amazing two level house with woderful interrier
+
 city: Canmore
 price: $750,000
 Bedrooms: 5
 Baths: 3
 Footage: 2500sq. ft
-Grabber: Amazing two level house with woderful interrier and has plenty of room for gardenning and outdoor activities
+
+Grabber: 
 Amazing two level house with woderful interrier and has plenty of room for gardenning and outdoor activities. Dont miss the oportunity!!

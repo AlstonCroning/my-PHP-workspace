@@ -152,3 +152,24 @@ left: -5px;
 	font-weight: normal;
 	text-align: center;
 }
+
+#divhomeslist {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	padding-left: 10px;
+	width: 590px;
+	height: 300px;
+}
+
+.paragraphHeading1 {
+	color: black;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.paragraphHeading2 {
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+}
