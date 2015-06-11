@@ -19,6 +19,8 @@
 	<p class="paragraphHeading1">Current Listings</p>
 	
 	<?php
+	//Gathering User Searched Info
+	$UserSearchInfo = $_POST['entercity'];
 	
 	//setting up the house images directory for reading images
 	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
@@ -39,47 +41,61 @@
 	}
 	sort($houseimages);//sort the array
 
-	
-	foreach ( $houseimages as $element)
-	{
-		//load the all images into the page
-		$imagename = 'house_images/'.$element;
-		print "<p><img src='".$imagename."' /></p>";
-
-		//get imagefilename and change the filename from .jpg to .txt
-		$saveinfo = $element;
-		$houseinfofilenames = str_replace( 'jpg' , 'txt' , $saveinfo );
-
-		//Setting up each House Information files for reading
-		$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/house_info/'.$houseinfofilenames;
-		$lines_in_a_file = count(  file($filename)  );
-		$fp = fopen( $filename, 'r'); //open the file for reading the data
-
-		//reads each file information and display as required
-		if( !feof($fp) )
+	//if Search Field is blank
+	//if( empty($UserSearchInfo) )
+	//{
+		foreach ( $houseimages as $element)
 		{
-			print "<div id='divhomeslist'><p class='paragraphHeading2'>";
-			$line =	fgets( $fp );
-			print "<br />".$line;
-			print "</p>";
-			$line =	fgets( $fp );			
-			for($ii = 0; $ii < $lines_in_a_file; $ii++)
+			//load the all images into the page
+			$imagename = 'house_images/'.$element;
+
+
+			//get imagefilename and change the filename from .jpg to .txt
+			$saveinfo = $element;
+			$houseinfofilenames = str_replace( 'jpg' , 'txt' , $saveinfo );
+
+			//Setting up each House Information files for reading
+			$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/house_info/'.$houseinfofilenames;
+			$lines_in_a_file = count(  file($filename)  );
+			$fp = fopen( $filename, 'r'); //open the file for reading the data
+
+			//reads each file information and display as required
+			if( !feof($fp) )
 			{
+				print "<div id='divhomeslist'><p class='paragraphHeading2'>";
 				$line =	fgets( $fp );
 				print "<br />".$line;
+				print "</p>";
+				$line =	fgets( $fp );			
+				for($ii = 0; $ii < $lines_in_a_file; $ii++)
+				{
+					$line =	fgets( $fp );
+					
+					if(	stripos($line,$UserSearchInfo) )
+					{
+						print "<br />match found: ".$UserSearchInfo."<br />";
+						print "<p><img src='".$imagename."' /></p>";
+						print "<br />".$line;
+					}
+				}
+				print "</div>";
 			}
-			print "</div>";
+			else
+			{
+				print "<p>No Information Provided</p>";
+			}
+			fclose($fp);//close each file
 		}
-		else
-		{
-			print "<p>No Information Provided</p>";
-		}
+	//}
 
+	//if the search field is Not blank
+/*
+	else
+	{
+		print "<p>The City you Searched for: <span class='bold_paragraph_default_fontsize'>".$UserSearchInfo."</span></p>";
 	}
-	fclose($fp);//close each file
+*/
 	?>
-
-	
 
 </body>
 </html>

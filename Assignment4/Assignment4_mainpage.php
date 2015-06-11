@@ -41,7 +41,6 @@
 	//load the Featured image into Featured Home div
 	$imagename = 'house_images/2-twolevelhouse.jpg';
 	print "<p><img src='".$imagename."' /></p>";
-
 	
 	//Setting up the Featured House Information file for reading
 	$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/house_info/2-twolevelhouse.txt';
