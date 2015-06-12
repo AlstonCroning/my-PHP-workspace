@@ -46,13 +46,6 @@
 	{
 		foreach ( $houseimages as $element)
 		{
-			/*
-			if(	stripos($line,$UserSearchInfo) )
-			{
-				print "<br />match found: ".$UserSearchInfo."<br />";
-			}
-			*/
-			
 			//load the all images into the page
 			$imagename = 'house_images/'.$element;
 			print "<p><img src='".$imagename."' /></p>";
@@ -95,13 +88,6 @@
 		print "<p>The City you Searched for: <span class='bold_paragraph_default_fontsize'>".$UserSearchInfo."</span></p>";	
 		foreach ( $houseimages as $element)
 		{
-			/*
-			if(	stripos($line,$UserSearchInfo) )
-			{
-				print "<br />match found: ".$UserSearchInfo."<br />";
-			}
-			*/
-
 			//get imagefilename and change the filename from .jpg to .txt
 			$saveinfo = $element;
 			$houseinfofilenames = str_replace( 'jpg' , 'txt' , $saveinfo );
@@ -114,41 +100,24 @@
 			//reads each file information and display as required
 			if( !feof($fp) )
 			{
-	
-				//$line =	fgets( $fp );
-				//$line =	fgets( $fp );			
-				
-			
-		
 				for($ii = 0; $ii < $lines_in_a_file; $ii++)
 				{
 					$line =	fgets( $fp );
 					
 					if( stripos($line,$UserSearchInfo) && $ii == 2 )
 					{
-					
-						//echo count_chars(  $UserSearchInfo, 3 );
-					
-					
-						echo $savesubstring1 = substr( $line, 6); //gets the city as a string
-						echo $savesubstring2 = substr( $savesubstring1, 0, 2); //gets the city as a string						
-						echo $savesubstring3 = substr( $UserSearchInfo, 0, 2); //usersearch info
+						$savesubstring1 = substr( $line, 6); //gets the city as a string
+						$savesubstring2 = substr( $savesubstring1, 0, 2); //gets the city as a string						
+						$savesubstring3 = substr( $UserSearchInfo, 0, 2); //usersearch info
 
 						$savesubstring1 = trim( $savesubstring1 );
 						$savesubstring2 = trim( $savesubstring2 );							
 						$savesubstring3 = trim( $savesubstring3 );
-		
-//						$savedFinalString = stripos($savesubstring1,$savesubstring3);
-//						if(   $savesubstring2 != $savesubstring3  )
 						
-//						if(  ($savesubstring1 == $savesubstring3) || ($savesubstring1 == $UserSearchInfo) )
-						
-						
-						if( !stripos($line,$UserSearchInfo)  )
+						if( !stripos($line,$UserSearchInfo) )
 						{
 							echo "No match!!!";
 						}
-						
 						else
 						{
 							//load the required image into the page
@@ -161,10 +130,6 @@
 								$line =	fgets( $fp );
 							}
 						}
-//						if( stripos($line,$UserSearchInfo) && ($savesubstring2 != $savesubstring3) )
-
-						
-						
 					}
 				}
 			}
@@ -175,7 +140,6 @@
 			fclose($fp);//close each file
 		}		
 	}
-
 	?>
 
 </body>
