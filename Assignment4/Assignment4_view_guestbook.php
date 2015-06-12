@@ -24,8 +24,6 @@
 	$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/data/guestbook.txt';
 	$lines_in_a_file = count(  file($filename)  );
 	$fp = fopen( $filename, 'r'); //open the file for reading the data
-
-
 	
 	if( feof($fp) )
 	{
@@ -42,7 +40,7 @@
 		echo	'	<th>Comments</th>'."\n";
 		echo '</tr>'."\n";
 
-	$counter = 0;
+		$counter = 0;
 		while(true){
 		$counter++;
 

@@ -61,25 +61,25 @@
 	
 	$formateddata = "";
 
-	if( ($firstname != '') && ($lastname!= '') ) {
+	if( ($firstname != '') && ($lastname!= '') ) 
+	{
 		$formateddata .= $firstname.'|'.$lastname.'|';
 		
-		if( $contactinformation != '' || $city != '' || $comments != '') {
-				
-				if ($contactinformation != '')
-					$formateddata .= $contactinformation.'|';
-				
-				if ($city != '' && $city != 'n/a')
-					$formateddata .= $city.'|';
-				
-				if ($comments != '')
-					$formateddata .= $comments.'|';
-
-				//$formateddata .= $contactinformation.'|'.$city.'|'.$comments.'|';
+		if( $contactinformation != '' || $city != '' || $comments != '') 
+		{
+			if ($contactinformation != '')
+				$formateddata .= $contactinformation.'|';
+			
+			if ($city != '' && $city != 'n/a')
+				$formateddata .= $city.'|';
+			
+			if ($comments != '')
+				$formateddata .= $comments.'|';
 	
 			$formateddata .= ''."\n";
 		}
-		else {
+		else 
+		{
 			$formateddata .= ''."\n";
 		}
 		

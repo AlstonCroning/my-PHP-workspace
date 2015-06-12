@@ -85,7 +85,7 @@
 <div id="morgageform">
 	<form method="post" action="Assignment4_mortgage.php">
 		<p class="titlepara">Mortgage Calculator</p>
-	
+
 		<table>
 			<tr>
 				<td>Amount Financed</td>
@@ -97,7 +97,7 @@
 				<td><input type="text" name="interestrate" size="10px" /></td>
 			</tr>
 		</table>
-		
+
 		<p><input type="submit" value="Calculate Payment" /></p>
 	</form>
 </div>
