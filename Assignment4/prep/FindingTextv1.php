@@ -40,7 +40,7 @@
 				$GetUserInputData = '';
 			}
 
-			$MatchData = '/\b'.$GetUserInputData.'\b/i';
+			$MatchData = '/\b'.$GetUserInputData.'./i';
 
 
 			$count = 0;
