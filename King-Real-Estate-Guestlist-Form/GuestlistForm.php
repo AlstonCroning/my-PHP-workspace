@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<title>0000 Assignment 1</title>
+<title>King Real Estate - Thank you!</title>
 <meta name="author" content="Alston" />
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="styles/0000_Assignment1.css" type="text/css" />
+<link rel="stylesheet" href="styles/styles.css" type="text/css" />
 </head>
 
 <body>
