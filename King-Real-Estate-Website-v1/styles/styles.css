@@ -1,0 +1,181 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+	background-color: #F0E68C;
+}
+
+p {
+	font-size: 16px;
+}
+
+input {
+	font-size: 16px;
+}
+
+select {
+	font-size: 16px;
+}
+
+textarea {
+	font-size: 16px;
+}
+
+.textblue {
+	color: blue; 
+}
+
+.textdisabled {
+	background-color: lightgray;
+}
+
+.titlepara {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#titlepara2 {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.signupform {
+	background-color: #D7D6E4;
+	position: absolute;
+	left: 8px;
+	top: 137px;
+	padding-left: 10px;
+	width: 550px;
+	height: 540px;
+}
+
+#morgageform {
+	background-color: #D7D6E4;
+	position: absolute;
+	left: 585px;
+	top: 137px;
+	padding-left: 10px;
+	width: 350px;
+	height: 540px;
+}
+
+#mortgagepagestyle {
+	background-color: #D7D6E4;
+	position: absolute;
+	left: 8px;
+	top: 137px;
+	padding-left: 10px;
+	width: 550px;
+	height: 540px;
+}
+
+#stylerows1 {
+	background-color: #FFFFFF;
+}
+
+#stylerows2 {
+	background-color: #E4ABAB;
+}
+
+#divfeaturedhome {
+	background-color: #D7D6E4;
+	position: absolute;
+	left: 8px;
+	top: 137px;
+	padding-left: 10px;
+	width: 430px;
+	height: 700px;	
+}
+
+#divfeaturedhome .pdivfeaturedhome {
+	color: blue;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#divfeaturedhome p{
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#divguestbookandcalc {
+	background-color: orange;
+	position: absolute;
+	left: 8px;
+	top: 1060px;
+	padding-left: 10px;
+	width: 250px;
+	height: 50px;
+}
+
+#divsearchcity {
+	background-color: pink;
+	position: absolute;
+	left: 8px;
+	top: 850px;
+	padding-left: 10px;
+	width: 430px;
+	height: 200px;
+}
+
+#divsearchcity #p_entercity_divsearchcity { 
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#divrealtorspanel {
+	background-color: lightblue;
+	position: absolute;
+	left: 460px;
+	top: 137px;
+	padding: 10px;
+	width: 170px;
+	height: 980px;
+}
+#divrealtorspanel img{
+	padding-left: 10px;
+	width: 150px;
+	height: 170px;
+position: relative;
+left: -5px;
+}
+
+#divrealtorspanel #p_divrealtorspanel {
+	color: blue;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#divrealtorspanel p {
+	color: black;
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+}
+
+#divhomeslist {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	padding-left: 10px;
+	width: 590px;
+	height: 300px;
+}
+
+.paragraphHeading1 {
+	color: black;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.paragraphHeading2 {
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.bold_paragraph_default_fontsize {
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+}
