@@ -13,7 +13,7 @@
 <body>
 
 <div id="logoimage">
-	<a href="http://localhost/Workspace/Assignment4/Assignment4_mainpage.php"><img src="images/logo.png" /></a>
+	<a href="http://localhost/Workspace/King-Real-Estate-Website-v1/King-Real-Estate_mainpage.php"><img src="images/logo.png" /></a>
 </div>
 
 <p id="titlepara2">View GuestBook</p>
@@ -21,7 +21,7 @@
 <?php
 	//setting up the guestbook.txt for reading
 	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-	$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/data/guestbook.txt';
+	$filename = $DOCUMENT_ROOT.'Workspace/King-Real-Estate-Website-v1/data/guestbook.txt';
 	$lines_in_a_file = count(  file($filename)  );
 	$fp = fopen( $filename, 'r'); //open the file for reading the data
 	

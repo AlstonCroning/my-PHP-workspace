@@ -13,7 +13,7 @@
 <body>
 
 	<div id="logoimage">
-		<a href="http://localhost/Workspace/Assignment4/Assignment4_mainpage.php"><img src="images/logo.png" /></a>
+		<a href="http://localhost/Workspace/King-Real-Estate-Website-v1/King-Real-Estate_mainpage.php"><img src="images/logo.png" /></a>
 	</div>
 
 	<p class="paragraphHeading1">Current Listings</p>
@@ -24,7 +24,7 @@
 	
 	//setting up the house images directory for reading images
 	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-	$dirname = $DOCUMENT_ROOT.'Workspace/Assignment4/house_images';//house images directory name
+	$dirname = $DOCUMENT_ROOT.'Workspace/King-Real-Estate-Website-v1/house_images';//house images directory name
 	$dirhandle = opendir($dirname); //directory pointer
 
 	//loads the all the images into $houseimages array
@@ -55,7 +55,7 @@
 			$houseinfofilenames = str_replace( 'jpg' , 'txt' , $saveinfo );
 
 			//Setting up each House Information files for reading
-			$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/house_info/'.$houseinfofilenames;
+			$filename = $DOCUMENT_ROOT.'Workspace/King-Real-Estate-Website-v1/house_info/'.$houseinfofilenames;
 			$lines_in_a_file = count(  file($filename)  );
 			$fp = fopen( $filename, 'r'); //open the file for reading the data
 
@@ -93,7 +93,7 @@
 			$houseinfofilenames = str_replace( 'jpg' , 'txt' , $saveinfo );
 			
 			//Setting up each House Information files for reading
-			$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/house_info/'.$houseinfofilenames;
+			$filename = $DOCUMENT_ROOT.'Workspace/King-Real-Estate-Website-v1/house_info/'.$houseinfofilenames;
 			$lines_in_a_file = count(  file($filename)  );
 			$fp = fopen( $filename, 'r'); //open the file for reading the data
 			

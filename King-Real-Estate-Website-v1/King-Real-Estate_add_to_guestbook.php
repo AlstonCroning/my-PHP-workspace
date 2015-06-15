@@ -13,7 +13,7 @@
 <body>
 
 <div id="logoimage">
-	<a href="http://localhost/Workspace/Assignment4/Assignment4_mainpage.php"><img src="images/logo.png" /></a>
+	<a href="http://localhost/Workspace/King-Real-Estate-Website-v1/King-Real-Estate_mainpage.php"><img src="images/logo.png" /></a>
 </div>
 
 <div class="signupform">
@@ -54,7 +54,7 @@
 	////////////////////////////////////////////////////////////////
 	
 	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-	$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/data/guestbook.txt';
+	$filename = $DOCUMENT_ROOT.'Workspace/King-Real-Estate-Website-v1/data/guestbook.txt';
 	$lines_in_file = count( file( $filename ) );
 	
 	$fp = fopen($filename, 'a'); //open the file for writting data

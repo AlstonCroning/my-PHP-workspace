@@ -13,14 +13,14 @@
 <body>
 
 <div id="logoimage">
-	<a href="http://localhost/Workspace/Assignment4/Assignment4_mainpage.php"><img src="images/logo.png" /></a>
+	<a href="http://localhost/Workspace/King-Real-Estate-Website-v1/King-Real-Estate_mainpage.php"><img src="images/logo.png" /></a>
 </div>
 
 
 <div class="signupform">
 	<p class="titlepara">Please sign up on our guest list</p>
 	
-	<form method="post" action="Assignment4_add_to_guestbook.php">
+	<form method="post" action="King-Real-Estate_add_to_guestbook.php">
 
 		<p>
 			First Name:<br />
@@ -44,7 +44,7 @@
 
 		<?php
 			$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-			$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/data/'.'cities.txt';
+			$filename = $DOCUMENT_ROOT.'Workspace/King-Real-Estate-Website-v1/data/'.'cities.txt';
 			$lines_in_file = count( file( $filename ) );
 			
 			$fp = fopen($filename, 'r'); //open the file for reading
@@ -78,12 +78,12 @@
 
 	</form>
 
-	<p>For Admin Use Only: <a href="Assignment4_view_guestbook.php" target="_blank">View Guestbook</a></p>
+	<p>For Admin Use Only: <a href="King-Real-Estate_view_guestbook.php" target="_blank">View Guestbook</a></p>
 	
 </div>
 
 <div id="morgageform">
-	<form method="post" action="Assignment4_mortgage.php">
+	<form method="post" action="King-Real-Estate_mortgage.php">
 		<p class="titlepara">Mortgage Calculator</p>
 
 		<table>

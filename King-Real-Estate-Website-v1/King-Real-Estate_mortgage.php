@@ -13,7 +13,7 @@
 <body>
 
 <div id="logoimage">
-	<a href="http://localhost/Workspace/Assignment4/Assignment4_mainpage.php"><img src="images/logo.png" /></a>
+	<a href="http://localhost/Workspace/King-Real-Estate-Website-v1/King-Real-Estate_mainpage.php"><img src="images/logo.png" /></a>
 </div>
 
 <div id="mortgagepagestyle">

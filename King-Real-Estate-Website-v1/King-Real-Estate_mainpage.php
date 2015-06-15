@@ -13,7 +13,7 @@
 <body>
 
 	<div id="logoimage">
-		<a href="http://localhost/Workspace/Assignment4/Assignment4_mainpage.php"><img src="images/logo.png" /></a>
+		<a href="http://localhost/Workspace/King-Real-Estate-Website-v1/King-Real-Estate_mainpage.php"><img src="images/logo.png" /></a>
 	</div>
 
 	<div id="divfeaturedhome">
@@ -21,7 +21,7 @@
 	<?php
 	//setting up the house images directory for reading images
 	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-	$dirname = $DOCUMENT_ROOT.'Workspace/Assignment4/house_images';//house images directory name
+	$dirname = $DOCUMENT_ROOT.'Workspace/King-Real-Estate-Website-v1/house_images';//house images directory name
 	$dirhandle = opendir($dirname); //directory pointer
 	
 	//loads the all the images into $houseimages array
@@ -43,7 +43,7 @@
 	print "<p><img src='".$imagename."' /></p>";
 	
 	//Setting up the Featured House Information file for reading
-	$filename = $DOCUMENT_ROOT.'Workspace/Assignment4/house_info/2-twolevelhouse.txt';
+	$filename = $DOCUMENT_ROOT.'Workspace/King-Real-Estate-Website-v1/house_info/2-twolevelhouse.txt';
 	$lines_in_a_file = count(  file($filename)  );
 	$fp = fopen( $filename, 'r'); //open the file for reading the data
 
@@ -69,7 +69,7 @@
 	</div>
 
 	<div id="divsearchcity">
-	<form method="post" action="Assignment4_homelist.php">
+	<form method="post" action="King-Real-Estate_homelist.php">
 		<p id="p_entercity_divsearchcity">Enter City</p>
 		<input type="text" name="entercity" size="30"/>
 		<br />(Leave blank to find all houses listed)
@@ -84,7 +84,7 @@
 	<?php
 	//setting up the house images directory for reading images
 	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-	$dirname = $DOCUMENT_ROOT.'Workspace/Assignment4/realter_images';//house images directory name
+	$dirname = $DOCUMENT_ROOT.'Workspace/King-Real-Estate-Website-v1/realter_images';//house images directory name
 	$dirhandle = opendir($dirname); //directory pointer
 	$counter = 0;
 
@@ -114,7 +114,7 @@
 	</div>
 
 	<div id="divguestbookandcalc">
-		<p><a href="http://localhost/Workspace/Assignment4/Assignment4_guest_calc.php">GuestBook/Mortgage Calculator</a></p>
+		<p><a href="http://localhost/Workspace/King-Real-Estate-Website-v1/King-Real-Estate_guest_calc.php">GuestBook/Mortgage Calculator</a></p>
 	</div>
 
 </body>
