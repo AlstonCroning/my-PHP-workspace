@@ -13,7 +13,7 @@
 <body>
 
 	<div id="logoimage">
-		<a href="http://localhost/Workspace/King-Real-Estate-Website-v1/King-Real-Estate_mainpage.php"><img src="images/logo.png" /></a>
+		<a href="index.php"><img src="images/logo.png" /></a>
 	</div>
 
 	<p class="paragraphHeading1">Current Listings</p>
