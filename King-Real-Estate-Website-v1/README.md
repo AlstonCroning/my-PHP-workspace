@@ -13,5 +13,5 @@ Alternating colored rows for recognizing data easily
 Upcomming Changes:	
 MySQL implementation for security improvements	
 Mouseover effect for Realators	
-Ajax implementation	
+Ajax implementation   
 Form Validation Improvements
