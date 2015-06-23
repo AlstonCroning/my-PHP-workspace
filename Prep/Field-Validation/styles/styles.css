@@ -33,3 +33,7 @@ textarea {
 	font-weight: bold;
 }
 
+.errormsg {
+	color: red;
+}
+

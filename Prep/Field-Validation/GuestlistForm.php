@@ -19,29 +19,66 @@
 <p id="titlepara">Thank you! A representative will contact you soon.</p>
 
 <?php
+	/**************************************************
+	/*Gathering Information
+	/*************************************************/
+	
 	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
 	$city = $_POST['city'];
 	$comments = $_POST['comments'];
 	$contactinformation = $_POST['contactinformation'];
 	$radiobuttongroup1 = $_POST['radiobuttongroup1'];
-	
+
 	$fullname = $firstname.' '.$lastname;
+	$error_Flag = '';
 	
-	print "<p>Information Submited for: ".$fullname."</p>";
+	
+	/**************************************************
+	/*Validating Information
+	/*************************************************/	
 
-	if ( $radiobuttongroup1 == "phone" )
+	if( empty($firstname) || empty($lastname) || empty($contactinformation) || empty($city))
+	{
+		$error_Flag = 'YES';
+	}
+	else
+	{
+		$error_Flag = 'NO';
+	}
+
+	/**************************************************
+	/*Displaying Information
+	/*************************************************/
+
+	if( $error_Flag != '')
+	{
+		if($error_Flag == 'YES')
 		{
-			print "<p>Your Phone is ".$contactinformation;
-		} else {
-		print "<p>Your Email is ".$contactinformation;
-	}	
+			print "<span class='errormsg'>You must enter required Fields!</span>";		
+		}
+		else
+		{
+			print "<p>Information Submited for: ".$fullname."</p>";
 
-	print "<br /> and you are interested in living in $city </p>";
-	print "<p>Our representative will review your comments below:</p>";
-	print "<p><textarea class='textdisabled' rows='5' cols='50' disabled='disabled'>$comments</textarea></p>";
+			if ( $radiobuttongroup1 == "phone" )
+			{
+				print "<p>Your Phone is ".$contactinformation;
+			} 
+			else 
+			{
+				print "<p>Your Email is ".$contactinformation;
+			}	
 
-	
+			print "<br /> and you are interested in living in $city </p>";
+			print "<p>Our representative will review your comments below:</p>";
+			print "<p><textarea class='textdisabled' rows='5' cols='50' disabled='disabled'>$comments</textarea></p>";			
+		}
+	}
+	else
+	{
+		print "Unexpected error";
+	}
 
 ?>
 
