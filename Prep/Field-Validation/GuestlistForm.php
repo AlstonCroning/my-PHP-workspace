@@ -32,13 +32,30 @@
 
 	$fullname = $firstname.' '.$lastname;
 	$error_Flag = '';
-	
+	$error_message = '';
 	
 	/**************************************************
 	/*Validating Information
 	/*************************************************/	
 
-	if( empty($firstname) || empty($lastname) || empty($contactinformation) || empty($city))
+	if($firstname == '')
+	{
+		$error_message .= "<span class='errormsg'>You must enter Your First Name!</span><br />";		
+	}
+	if($lastname == '')
+	{
+		$error_message .= "<span class='errormsg'>You must enter your Last Name!</span><br />";
+	}
+	if($contactinformation == '')
+	{
+		$error_message .= "<span class='errormsg'>You must enter your Contact Information!</span><br />";
+	}		
+	if($city == '-')
+	{
+		$error_message .= "<span class='errormsg'>You must enter a city!</span><br />";
+	}	
+
+	if( empty($firstname) || empty($lastname) || empty($contactinformation) || $city == '-' )
 	{
 		$error_Flag = 'YES';
 	}
@@ -53,10 +70,14 @@
 
 	if( $error_Flag != '')
 	{
+	
+		//Error Condition
 		if($error_Flag == 'YES')
 		{
-			print "<span class='errormsg'>You must enter required Fields!</span>";		
+			print $error_message;
 		}
+
+		//if NO ERRORS
 		else
 		{
 			print "<p>Information Submited for: ".$fullname."</p>";
