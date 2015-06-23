@@ -13,7 +13,7 @@
 
 <body>
 
-<img src="realter_images/john.jpg" onmouseover="AppearImage()" onmouseout="Hideimage()"/>
+<img src="realter_images/john.jpg"  />
 
 <div id="stylediv">
 	<p>Style this Div</p>
