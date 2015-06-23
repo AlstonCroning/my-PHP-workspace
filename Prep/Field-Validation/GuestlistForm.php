@@ -33,6 +33,7 @@
 	$fullname = $firstname.' '.$lastname;
 	$error_Flag = '';
 	$error_message = '';
+	$RadioButton_Flag = '';
 	
 	/**************************************************
 	/*Validating Information
@@ -49,13 +50,30 @@
 	if($contactinformation == '')
 	{
 		$error_message .= "<span class='errormsg'>You must enter your Contact Information!</span><br />";
-	}		
+	}
+	else
+	{
+		if ( $radiobuttongroup1 == "phone" )
+		{
+			if( !is_numeric($contactinformation) )
+			{
+				$error_message .= "<span class='errormsg'>The phone number you entered is not Numaric!</span><br />";
+				$RadioButton_Flag = 'NO';
+			}
+			else
+			{
+				$RadioButton_Flag = 'YES';
+			}
+		} 
+	}
+	
 	if($city == '-')
 	{
 		$error_message .= "<span class='errormsg'>You must enter a city!</span><br />";
 	}	
 
-	if( empty($firstname) || empty($lastname) || empty($contactinformation) || $city == '-' )
+	
+	if( empty($firstname) || empty($lastname) || empty($contactinformation) || $city == '-' || $RadioButton_Flag == 'NO' )
 	{
 		$error_Flag = 'YES';
 	}
@@ -63,6 +81,9 @@
 	{
 		$error_Flag = 'NO';
 	}
+	
+
+	
 
 	/**************************************************
 	/*Displaying Information
@@ -70,7 +91,6 @@
 
 	if( $error_Flag != '')
 	{
-	
 		//Error Condition
 		if($error_Flag == 'YES')
 		{
