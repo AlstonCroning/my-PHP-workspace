@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>King Real Estate - Signup Form</title>
+<meta name="author" content="Alston" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="styles/styles.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="logoimage">
+	<img src="images/logo.png" />
+</div>
+
+<p id="titlepara">Please sign up on our guest list a representative will contact you soon.</p>
+
+<form method="post" action="GuestlistForm.php">
+
+	<p>
+		First Name:<br />
+		<input type="text" name="firstname" size="30" />
+	</p>
+
+	<p>
+		Last Name:<br />
+		<input type="text" name="lastname" size="30" />
+	</p>
+
+	<p>
+		Contact Information: 
+		<input type="radio" name="radiobuttongroup1" value="phone" checked="checked" />
+		Phone
+		<input type="radio" name="radiobuttongroup1" value="Email" />
+		Email
+		<br />
+		<input type="text" name="contactinformation" size="45" />
+	</p>
+	
+	<p>
+		City Where You Want to Reside:<br />
+		<select name="city" size="1">
+			<option value="n/a">-</option>
+			<option value="toronto">Toronto</option>
+			<option value="detroit">Detroit</option>
+			<option value="chicago">Chicago</option>
+		</select>
+	</p>
+	
+	<p>
+		Comments:<br />
+		<textarea name="comments" rows="5" cols="50"></textarea>
+	</p>
+	
+	<p>
+		<input type="submit" value="Submit Information" />
+	</p>
+
+</form>
+
+</body>
+</html>
