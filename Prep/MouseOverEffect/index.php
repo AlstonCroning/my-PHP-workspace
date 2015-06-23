@@ -8,15 +8,17 @@
 	<meta name="author" content="Alston" />
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<link rel="stylesheet" href="styles/styles.css" type="text/css" />
+	<script type="text/javascript"></script>
 </head>
 
 <body>
 
+<img src="realter_images/john.jpg" onmouseover="AppearImage()" onmouseout="Hideimage()"/>
 
+<div id="stylediv">
+	<p>Style this Div</p>
+</div>
 
-
-
-
-
+<script src="scripts/script.js" ></script>
 </body>
 </html>
