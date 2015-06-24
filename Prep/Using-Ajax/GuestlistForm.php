@@ -98,7 +98,7 @@
 	{
 		$error_message .= "<span class='errormsg'>You must enter a city!</span><br />";
 		$error_Flag = 'YES';		
-	}	
+	}
 
 	/**************************************************
 	/*Displaying Information
@@ -126,7 +126,6 @@
 		print "<p>Our representative will review your comments below:</p>";
 		print "<p><textarea class='textdisabled' rows='5' cols='50' disabled='disabled'>$comments</textarea></p>";		
 	}
-			
 ?>
 
 </body>
