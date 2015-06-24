@@ -29,7 +29,7 @@
 	$comments = $_POST['comments'];
 	$contactinformation = $_POST['contactinformation'];
 	$radiobuttongroup1 = $_POST['radiobuttongroup1'];
-
+	
 	$fullname = $firstname.' '.$lastname;
 	$error_Flag = '';
 	$error_message = '';
@@ -41,15 +41,36 @@
 
 	if($firstname == '')
 	{
-		$error_message .= "<span class='errormsg'>You must enter Your First Name!</span><br />";		
+		$error_message .= "<span class='errormsg'>You must enter Your First Name!</span><br />";
+		$error_Flag = 'YES';
 	}
+	else
+	{
+		if(is_numeric($firstname))
+		{
+			$error_message .= "<span class='errormsg'>Numaric First Name!</span><br />";
+			$error_Flag = 'YES';
+		}
+	}
+	
 	if($lastname == '')
 	{
 		$error_message .= "<span class='errormsg'>You must enter your Last Name!</span><br />";
+		$error_Flag = 'YES';		
 	}
+	else
+	{
+		if(is_numeric($lastname))
+		{
+			$error_message .= "<span class='errormsg'>Numaric Last Name!</span><br />";
+			$error_Flag = 'YES';
+		}
+	}
+	
 	if($contactinformation == '')
 	{
 		$error_message .= "<span class='errormsg'>You must enter your Contact Information!</span><br />";
+		$error_Flag = 'YES';
 	}
 	else
 	{
@@ -57,8 +78,14 @@
 		{
 			if( !is_numeric($contactinformation) )
 			{
-				$error_message .= "<span class='errormsg'>The phone number you entered is not Numaric!</span><br />";
-				$RadioButton_Flag = 'NO';
+				$temp_contactinformation = str_replace( '-', '', $contactinformation );
+				
+				if( !is_numeric($temp_contactinformation) )
+				{
+					$error_message .= "<span class='errormsg'>The phone number you entered is not Numaric!</span><br />";
+					$RadioButton_Flag = 'NO';
+					$error_Flag = 'YES';	
+				}
 			}
 			else
 			{
@@ -70,57 +97,36 @@
 	if($city == '-')
 	{
 		$error_message .= "<span class='errormsg'>You must enter a city!</span><br />";
+		$error_Flag = 'YES';		
 	}	
-
-	
-	if( empty($firstname) || empty($lastname) || empty($contactinformation) || $city == '-' || $RadioButton_Flag == 'NO' )
-	{
-		$error_Flag = 'YES';
-	}
-	else
-	{
-		$error_Flag = 'NO';
-	}
-	
-
-	
 
 	/**************************************************
 	/*Displaying Information
 	/*************************************************/
 
-	if( $error_Flag != '')
+	if(	$error_Flag == 'YES')
 	{
-		//Error Condition
-		if($error_Flag == 'YES')
-		{
-			print $error_message;
-		}
-
-		//if NO ERRORS
-		else
-		{
-			print "<p>Information Submited for: ".$fullname."</p>";
-
-			if ( $radiobuttongroup1 == "phone" )
-			{
-				print "<p>Your Phone is ".$contactinformation;
-			} 
-			else 
-			{
-				print "<p>Your Email is ".$contactinformation;
-			}	
-
-			print "<br /> and you are interested in living in $city </p>";
-			print "<p>Our representative will review your comments below:</p>";
-			print "<p><textarea class='textdisabled' rows='5' cols='50' disabled='disabled'>$comments</textarea></p>";			
-		}
-	}
-	else
-	{
-		print "Unexpected error";
+		print $error_message;
 	}
 
+	if($error_Flag == '')
+	{
+		print "<p>Information Submited for: ".$fullname."</p>";
+
+		if ( $radiobuttongroup1 == "phone" )
+		{
+			print "<p>Your Phone is ".$contactinformation;
+		} 
+		else 
+		{
+			print "<p>Your Email is ".$contactinformation;
+		}	
+
+		print "<br /> and you are interested in living in $city </p>";
+		print "<p>Our representative will review your comments below:</p>";
+		print "<p><textarea class='textdisabled' rows='5' cols='50' disabled='disabled'>$comments</textarea></p>";		
+	}
+			
 ?>
 
 </body>
