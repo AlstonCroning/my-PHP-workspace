@@ -23,11 +23,31 @@ INSERT INTO Employee
 VALUES 
 ('111-22-3333','Smith', 'John', 234, 50000,'1999-10-15');
 
-
 INSERT INTO Employee 
 (ssn, lastname, firstname, department_code, annual_salary, hire_date), 
 VALUES 
 ('222-33-4444','Jones', 'Mary', 234, 56000,'1998-01-02');
+
+
+Problem_4:
+INSERT INTO Department VALUES 
+(234,'Information Services');
+
+INSERT INTO Department VALUES
+(456,'Systems Group');
+
+INSERT INTO Department VALUES 
+(657, 'Payroll');
+
+
+Problem_5:
+SELECT lastname, firstname, hire_date 
+FROM Employee 
+ORDER BY lastname;
+
+
+
+
 
 
 
