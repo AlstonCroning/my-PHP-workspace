@@ -46,11 +46,21 @@ FROM Employee
 ORDER BY lastname;
 
 
+Problem_6:
+SELECT AVG(annual_salary) 
+FROM Employee;
 
 
+Problem_7:
+DELETE FROM Employee 
+WHERE lastname = 'Smith' 
+AND firstname = 'John';
 
+Problem_8:
+UPDATE Employee 
+SET annual_salary = annual_salary + 1000;
 
-
-
+Problem_9:
+DROP TABLE Department;
 
 
