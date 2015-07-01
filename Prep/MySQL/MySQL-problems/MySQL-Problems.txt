@@ -19,12 +19,12 @@ CREATE TABLE Department
 
 Problem_3:
 INSERT INTO Employee 
-(ssn, lastname, firstname, department_code, annual_salary, hire_date), 
+(ssn, lastname, firstname, department_code, annual_salary, hire_date) 
 VALUES 
 ('111-22-3333','Smith', 'John', 234, 50000,'1999-10-15');
 
 INSERT INTO Employee 
-(ssn, lastname, firstname, department_code, annual_salary, hire_date), 
+(ssn, lastname, firstname, department_code, annual_salary, hire_date) 
 VALUES 
 ('222-33-4444','Jones', 'Mary', 234, 56000,'1998-01-02');
 
